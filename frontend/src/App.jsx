@@ -10,7 +10,7 @@ export default function App() {
 
   const handleSubmit = () => {
     axios
-      .post("http://localhost:3000/api/short", { originalUrl })
+      .post("https://url-shortner-01.onrender.com/api/short", { originalUrl })
       .then((res) => {
         setShortUrl(res.data.shortUrl);
         setQrCodeImg(res.data.qrCodeImg);

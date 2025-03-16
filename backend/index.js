@@ -31,7 +31,8 @@ app.post('/api/short', async(req, res) => {
         if(!originalUrl) return res.status(400).json({ error: 'originalUrl error' });
         const shortUrl = nanoid(8)
         const url = new Url({ originalUrl, shortUrl })
-        const myUrl = `http://localhost:3000/${shortUrl}`
+        const myUrl = `https://url-shortner-01.onrender.com/${shortUrl}`
+        // const myUrl = `http://localhost:3000/${shortUrl}`
        // const QRCode = require('qrcode');
 
         const qrCodeImg = await QRCode.toDataURL(myUrl)
